@@ -1,6 +1,6 @@
 package com.company;
 
-public class letter {
+public class challenge3 {
     public static final int SIZE = 9;
 
     public static void main(String args[]) {
