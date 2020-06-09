@@ -1,7 +1,7 @@
 package com.company;
 
 public class challenge3 {
-    public static final int SIZE = 9;
+    public static final int SIZE = 5;
 
     public static void main(String args[]) {
 
