@@ -45,7 +45,7 @@ public class DataType {
         //print
         System.out.println (); //for formatting
         System.out.print (calc1);
-        System.out.printf(" \n %.1f", calc2);
+        System.out.printf(" \n %0.1f", calc2);
         System.out.println (); //for formatting
         System.out.println (calc3);
     }
