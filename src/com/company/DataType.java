@@ -37,7 +37,7 @@ public class DataType {
         s2 = scan.nextLine();
         s2 = scan.nextLine();
 
-        //equation variable
+        //equation variables
         int calc1 = i +i2;
         double calc2 = d + d2;
         String calc3 = s + s2;
