@@ -6,8 +6,10 @@ package com.company;
 //  declare another int, double, and String
 //  print something that asks the user to input specific things (such as an integer, double, and phrase)
 //  make scanner read the input
-//  set up variables for each output (make equations)
+//  set up variables for each output
+//  make equations by adding the two values
 //  print the outputs
+//  when printing out the double make sure it is to one decimal place by using print f and %.1
 
 import java.util.Scanner;
 public class DataType {
@@ -47,5 +49,6 @@ public class DataType {
         System.out.println (calc1);
         System.out.printf("%.1f\n", calc2);
         System.out.println (calc3);
+
     }
 }
