@@ -1,4 +1,13 @@
 package com.company;
+//Christine
+
+//make scanner
+//print statement that will ask the user to enter their full name
+//make string called fullName
+//define indexOf
+//make strings for first name and last name and use substring to separate the two
+//define initial
+//print out the final gangsta name
 
 import java.util.*;
 public class gangsta {
