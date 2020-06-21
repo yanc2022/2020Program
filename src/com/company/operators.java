@@ -14,12 +14,14 @@ import java.util.Scanner;
 public class operators {
     public static void main(String[] args) {
 
+        //declare variables
         double mealCost;
         int tipPercent;
         int taxPercent;
 
         Scanner scan = new Scanner(System.in);
 
+        //ask the user for info
         System.out.println("What is the cost of your meal?");
         mealCost = scan.nextDouble();
         System.out.println("How much is your tip percentage?");
@@ -27,6 +29,7 @@ public class operators {
         System.out.println("What is your tax rate?");
         taxPercent = scan.nextInt();
 
+        //calculations
         double tip = mealCost * tipPercent/100;
         double tax = mealCost * taxPercent/100;
         double total = mealCost + tip + tax;
