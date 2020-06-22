@@ -23,26 +23,33 @@ public class string {
         System.out.print("How many words do you want to input (between 1 and 10)?");
         int number = input.nextInt();
 
-        if (number <= 10 && number >= 1) { //to make sure number is between 1 and 10
+        //to make sure number is between 1 and 10
+        if (number <= 10 && number >= 1) {
             for (int n = 0; n < number; n++) {
                 String word;
 
                 System.out.println("Please enter your word (# of letters between 2 and 10,000: )");
                 word = input.next();
 
-                if (word.length()<=10000 &&  word.length()>=2) { //to make sure length of word is between 2 and 10000
+                //to make sure length of word is between 2 and 10000
+                if (word.length()<=10000 &&  word.length()>=2) {
                     String divideWord = divideWord(word);
                     System.out.println(divideWord);
                 }
-                else
-                    System.out.println("Try again and make sure your word is between 2 and 10,000 letters long"); //will tell user to try again
-                    break; //will stop process if constraints not met
+                else {
+                    //will tell user to try again
+                    System.out.println("Try again and make sure your word is between 2 and 10,000 letters long");
+                    //will stop process if constraints not met
+                    break;
+                }
+
             }
         } else
-            System.out.print("Try again and make sure your number is between 1 and 10"); //will tell user to try again
+            //will tell user to try again
+            System.out.print("Try again and make sure your number is between 1 and 10");
     }
-
-        public static String divideWord (String word){ //create a method to divide word
+    //create a method to divide word
+        public static String divideWord (String word){
             String even = "";
             String odd = "";
 
