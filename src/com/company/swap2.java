@@ -4,10 +4,10 @@ import java.util.*;
 
 public class swap2 {
     public static void main(String[] args) {
-        Random number = new Random ();
-        int size = number.nextInt(5)+5;
+        Random number = new Random();
+        int size = number.nextInt(5) + 5;
         System.out.println("you will have " + size + " random numbers");
-        int[] a1 = new int [size];
+        int[] a1 = new int[size];
 
 
         for (int i = 0; i < size; i++) {
@@ -18,12 +18,11 @@ public class swap2 {
         int value1 = number.nextInt(size);
         int value2 = number.nextInt(size);
 
-        do{
-            swap(a1, value1, value2);
-        }
-        while (value1 == value2);
+        if (value1 != value2) {
 
-        System.out.println(Arrays.toString(a1));
+            swap(a1, value1, value2);
+            System.out.println(Arrays.toString(a1));
+        }
     }
 
     public static int[] swap(int[] a, int value1, int value2) {
