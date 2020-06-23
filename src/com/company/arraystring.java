@@ -38,11 +38,6 @@ public class arraystring {
                         inputArray[n] = phrase;
                     }
 
-                    //to make sure length of word is between 2 and 10000
-                   if (phrase.length()<=10000 &&  phrase.length()>=2) {
-                        String divideWord = divideWord(phrase);
-                        System.out.println(divideWord);
-                    }
                     else {
                         //will tell user to try again
                         System.out.println("Try again and make sure your word is between 2 and 10,000 letters long");
