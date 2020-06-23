@@ -1,4 +1,17 @@
 package com.company;
+//Christine Yan
+
+//create random object
+//declare int variable for size
+//print something that will tell them what the random size is
+//declare array with size
+//create for loop
+//create restraints for the value of number
+//print original array
+//create two random values to be swapped
+//make if statement to make sure the values are different
+//make method to swap the two values
+//print output
 
 import java.util.*;
 
