@@ -18,9 +18,9 @@ import java.util.*;
 public class swap2 {
     public static void main(String[] args) {
         Random number = new Random();
-        int size = number.nextInt(5) + 5;
+        int size = number.nextInt(5) + 5; //make values between 5 and 10
         System.out.println("you will have " + size + " random numbers");
-        int[] a1 = new int[size];
+        int[] a1 = new int[size]; //create array with randomly generated size
 
 
         for (int i = 0; i < size; i++) {
@@ -28,17 +28,17 @@ public class swap2 {
         }
         System.out.println(Arrays.toString(a1));
 
-        int value1 = number.nextInt(size);
+        int value1 = number.nextInt(size); //declare the two places that will be swapped
         int value2 = number.nextInt(size);
 
-        if (value1 != value2) {
+        if (value1 != value2) { //value1 can't equal value 2 because nothing will be swapped
 
             swap(a1, value1, value2);
             System.out.println(Arrays.toString(a1));
         }
     }
 
-    public static int[] swap(int[] a, int value1, int value2) {
+    public static int[] swap(int[] a, int value1, int value2) { //method to swap values
         int temp = a[value1];
         a[value1] = a[value2];
         a[value2] = temp;
