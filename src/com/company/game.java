@@ -7,25 +7,21 @@ import java.io.IOException;
 //Christine Yan
 
 //import scanner
-//make a method for a welcome screen and instructions
-//make a method for the reader
-//create file reader
-//create scanner to read file
-//create if statement for if the token equals the answer the user gave
-//in the if statement, print out that the user guessed correctly and also add to the score and rounds count, then add return statement
-//if the user guesses incorrectly, print out that the user guessed incorrectly and only add to the rounds count, then add return statement
-//declare score and roundNum as integers
+//call "welcome" method
+//declare and initialize score and roundNum as integers
 //declare scoreRound as array
 //ask the user whether they want to play
 //create while loop that works when the user types "Y"
 //ask the user whether they want to guess a food or number
 //create if statement for if the answer wants to guess a food
 //ask user to enter a food
+//call "reader" method
 //add scoreRound
 //print out the score and round number
 //ask if the user wants to play again
 //create else if statement for if the user wants to guess a number
 //ask user to type number between 1 and 50
+//call "reader" method
 //declare num as double
 //create while loop for when the user inputs a number outside or range reminding user to be aware of constraints
 //ask user to guess another number
@@ -33,6 +29,13 @@ import java.io.IOException;
 //print out the score and round number
 //ask if the user wants to play again
 //create else statement for when the user chooses something other than a word or number and ask if the user wants to play again
+//make a method for the reader
+//create file reader
+//create scanner to read file
+//create if statement for if the token equals the answer the user gave
+//in the if statement, print out that the user guessed correctly and also add to the score and rounds count, then add return statement
+//if the user guesses incorrectly, print out that the user guessed incorrectly and only add to the rounds count, then add return statement
+//make a method for a welcome screen and instructions
 
 
 
