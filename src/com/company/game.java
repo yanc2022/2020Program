@@ -15,17 +15,16 @@ import java.io.IOException;
 //ask the user whether they want to guess a food or number
 //create if statement for if the answer wants to guess a food
 //ask user to enter a food
+//declare/initialize string variable called answer
 //call "reader" method
-//add scoreRound
 //print out the score and round number
 //ask if the user wants to play again
 //create else if statement for if the user wants to guess a number
 //ask user to type number between 1 and 50
-//call "reader" method
-//declare num as double
+//declare/initialize string variable called answer2
 //create while loop for when the user inputs a number outside or range reminding user to be aware of constraints
 //ask user to guess another number
-//add scoreRound
+//call "reader" method
 //print out the score and round number
 //ask if the user wants to play again
 //create else statement for when the user chooses something other than a word or number and ask if the user wants to play again
@@ -33,8 +32,12 @@ import java.io.IOException;
 //create file reader
 //create scanner to read file
 //create if statement for if the token equals the answer the user gave
-//in the if statement, print out that the user guessed correctly and also add to the score and rounds count, then add return statement
-//if the user guesses incorrectly, print out that the user guessed incorrectly and only add to the rounds count, then add return statement
+//in the if statement, print out that the user guessed correctly
+// also add 1 to the score and rounds count
+// return to main
+//if the user guesses incorrectly, print out that the user guessed incorrectly
+// only add to the rounds count
+//return to main
 //make a method for a welcome screen and instructions
 
 
@@ -43,67 +46,67 @@ public class game {
 
         public static void main(String[] args) throws IOException {
             Scanner input = new Scanner(System.in);
-            Welcome();
+            Welcome(); //calls welcome method with welcome screen and instructions
             System.out.print("Do you want to play (Y or N)? ");
             String play = input.next();
-            int score = 0;
-            int roundNum = 0;
-            int[] scoreRound = {score, roundNum};
+            int score = 0; //declare/initialize score
+            int roundNum = 0; //declare/initialize round number
+            int[] scoreRound = {score, roundNum}; //array for scoreRound
 
             while (play.toUpperCase().equals("Y")) {
                 System.out.print("Do you want to guess a type of food (F) or a number (N)? ");
                 String wordType = input.next();
-                if (wordType.toUpperCase().equals("F")) {
+                if (wordType.toUpperCase().equals("F")) { //if statement for if the user chooses food
                     System.out.print("Type a food you want to guess: ");
-                    String answer = input.next();
+                    String answer = input.next(); //declare/initialize string variable called answer
                     scoreRound = Reader(answer, scoreRound);
-                    System.out.println("Score: " + scoreRound[0] + "\nRounds: " + scoreRound[1]);
+                    System.out.println("Score: " + scoreRound[0] + "\nRounds: " + scoreRound[1]); //print results
                     System.out.println( );
                     System.out.print("Do you want to play again(Y or N)? ");
                     play = input.next();
-                } else if (wordType.toUpperCase().equals("N")) {
+                } else if (wordType.toUpperCase().equals("N")) { //else if statement for if user chooses number
                     System.out.print("Type a number between 1-50 inclusive that you want to guess (both decimals and integers work): ");
-                    String answer2 = input.next();
-                    double num = Double.parseDouble(answer2);
-                    while (num < 1 || num > 50) {
+                    String answer2 = input.next(); //declare/initialize string variable called answer2
+                    double num = Double.parseDouble(answer2); //change to double
+                    while (num < 1 || num > 50) { //while loop for if user guesses outside of range
                         System.out.println("You can only guess numbers between 1-50 inclusive");
                         System.out.print("Guess another number here (both decimals and integers work): ");
                         answer2 = input.next();
                         num = Double.parseDouble(answer2);
                     }
                     scoreRound = Reader(answer2, scoreRound);
-                    System.out.println("Score: " + scoreRound[0] + "\nRounds: " + scoreRound[1]);
+                    System.out.println("Score: " + scoreRound[0] + "\nRounds: " + scoreRound[1]); //print results
                     System.out.println( );
                     System.out.print("Do you want to play again(Y or N): ");
                     play = input.next();
-                } else {
+                } else { //else statement if the user enters something other than F or N
                     System.out.println("You can only choose between a number and a word");
                     System.out.print("Do you want to play again(Y or N): ");
                     play = input.next();
                 }
             }
-            Close(scoreRound);
+            Close(scoreRound); //call ending screen method
         }
 
-        public static int[] Reader(String answer, int[] scoreRound) throws IOException {
-            FileReader readF = new FileReader("c:/temp/info.txt");
-            Scanner myScanner = new Scanner(readF);
+        public static int[] Reader(String answer, int[] scoreRound) throws IOException { //reader method
+            FileReader readF = new FileReader("c:/temp/info.txt"); //create file reader
+            Scanner myScanner = new Scanner(readF); //scans file
             int [] initial= scoreRound;
             while (myScanner.hasNext()) {
                 String token = myScanner.next();
-                if (token.toUpperCase().equals(answer.toUpperCase())) {
-                    scoreRound[0] = scoreRound[0] + 1;
+                if (token.toUpperCase().equals(answer.toUpperCase())) { //if statement for if the user guesses correctly
+                    scoreRound[0] = scoreRound[0] + 1; //increase score and round count by 1
                     scoreRound[1] = scoreRound[1] + 1;
                     System.out.println("Guess is correct!");
-                    return scoreRound;
+                    return scoreRound; //return to main
                 }
             }
-            System.out.println("Guess is incorrect!");
-            scoreRound[1] = scoreRound[1] + 1;
-            return scoreRound;
+            System.out.println("Guess is incorrect!"); //if user guesses incorrectly
+            scoreRound[1] = scoreRound[1] + 1; //increase only round count
+            return scoreRound; //return to main
         }
 
-        public static void Welcome() {
+        public static void Welcome() { //method for welcome screen and instructions
             System.out.println("*----------------------*");
             System.out.println("|                      |");
             System.out.println("|      Welcome to      |");
@@ -116,7 +119,7 @@ public class game {
             System.out.println("| You can play as many |\n| times as you want    |");
             System.out.println("*----------------------*");
         }
-        public static void Close(int scoreRound[]){
+        public static void Close(int scoreRound[]){ //ending screen with final results
             String space=" ";
             System.out.println("*----------------------*");
             System.out.println("|  Thanks for playing  |");
